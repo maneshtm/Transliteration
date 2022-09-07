@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </script>
+                            <script type="text/javascript" src="transliteration.js">
+    </script>
+
+  </head>
+  <body>
+    Type in malayalam)<br>
+    <input type="text" id="textboxsearch" style="width:600px;">
+<script type="text/javascript">
+
+    var ff = 0,
+    options = {
+        sourceLanguage: "en",
+        destinationLanguage: ["ml"],
+        shortcutKey: "ctrl+g",
+        transliterationEnabled: false
+    },
+    control = new google.elements.transliteration.TransliterationControl(options);
+control.makeTransliteratable(["textboxsearch"]);
+  
+  function mlFunction() {
+
+    
+        options = {
+        sourceLanguage: "en",
+        destinationLanguage: ["ml"],
+        shortcutKey: "ctrl+g",
+        transliterationEnabled: true
+    },
+       control = new google.elements.transliteration.TransliterationControl(options);
+control.makeTransliteratable(["textboxsearch"],options);
+    
+ 
+}
+  
+mlFunction()
+    </script>
+  </body>
+</html> 
